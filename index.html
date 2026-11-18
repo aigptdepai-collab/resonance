@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Resonance</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Top Bar -->
+    <header id="header">
+      <div class="brand">
+        <div class="logo">◈</div>
+        <div>
+          <h1>Resonance</h1>
+          <p class="tagline" id="tagline">Feel the frequency</p>
+        </div>
+      </div>
+      <div class="lang">
+        <button id="btn-en" class="lang-btn active">EN</button>
+        <button id="btn-fa" class="lang-btn">فا</button>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div id="stats">
+      <div class="stat">
+        <span class="label" id="label-level">Level</span>
+        <span class="value" id="level">1</span>
+      </div>
+      <div class="stat">
+        <span class="label" id="label-score">Score</span>
+        <span class="value" id="score">0</span>
+      </div>
+      <div class="stat">
+        <span class="label" id="label-moves">Moves</span>
+        <span class="value" id="moves">12</span>
+      </div>
+    </div>
+
+    <!-- Game Canvas -->
+    <div id="canvas-wrap">
+      <canvas id="game"></canvas>
+      <div id="overlay" class="hidden">
+        <div id="overlay-content">
+          <h2 id="overlay-title">Level Complete</h2>
+          <p id="overlay-desc"></p>
+          <button id="overlay-btn">Next Level</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div id="controls">
+      <button id="btn-hint" class="ctrl-btn">💡 <span id="hint-text">Hint</span></button>
+      <button id="btn-restart" class="ctrl-btn">↻ <span id="restart-text">Restart</span></button>
+    </div>
+
+    <p id="help" class="help">Tap a crystal to send a pulse. Match 3+ of the same color to clear.</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
